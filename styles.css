@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --clr-very-dark-magenta: hsla(300, 43%, 22%, 0.95);
+    --clr-soft-pink: hsla(333, 80%, 67%);
+    --clr-light-soft-pink: hsla(333, 80%, 67%, 0.1);
+    --clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fs-small: 0.9375rem;
+    --fs-normal: 1.1rem;
+    --fs-big: 1.5rem;
+    --fs-large: 2rem;
+    --fs-huge: 2.5rem;
+
+    --fw-thin: 400;
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --spc-small: 0.6em;
+    --spc-normal: 1em;
+    --spc-large: 2em;
+    --spc-larger: 3em;
+    --spc-huge: 5em;
+
+    --br-normal: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--fs-normal);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: var(--fw-thin);
+    color: var(--clr-very-dark-magenta);
+
+    background-size: 100%;
+    background-color: var(--clr-light-grayish-magenta);
+    background-image: url('images/bg-pattern-top-mobile.svg'), 
+        url('images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+
+    margin: var(--spc-huge) 0;
+}   
+
+main {
+    margin-bottom: var(--spc-normal)
+}
+
+.container {
+    padding: 0 var(--spc-large);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: var(--spc-large);
+    line-height: var(--fs-big);
+}
+
+.title > h1 {
+    font-size: var(--fs-huge);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--spc-small);
+    line-height: var(--fs-large);
+}
+
+.rating-container {
+    margin-bottom: var(--spc-larger);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spc-small);
+    background-color: var(--clr-light-soft-pink);
+    border-radius: var(--br-normal);
+    margin-bottom: var(--spc-normal);
+}
+
+.rating > p {
+    font-weight: var(--fw-bold);
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: var(--spc-small);
+    margin-bottom: var(--spc-small);
+}
+
+.review-card {
+    background-color: var(--clr-very-dark-magenta);
+    padding: var(--spc-large);
+    border-radius: var(--br-normal);
+    color: var(--clr-white);
+    margin-bottom: var(--spc-normal);
+}
+
+.review-card > header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spc-normal);
+    height: var(--spc-larger);
+}
+
+.customer-img {
+    margin-right: var(--spc-normal);
+    border-radius: 50%;
+    height: 100%;
+}
+
+.review-card-title {
+    font-weight: var(--fw-normal);
+}
+
+.review-card-title > h4 {
+    color: var(--clr-soft-pink);
+    font-weight: var(--fw-thin);
+}
+
+.review-card > p {
+    line-height: var(--fs-big);
+}
+
+@media screen and (min-width > 600px) {
+    /*Desktop Design*/
+}
