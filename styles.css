@@ -28,6 +28,7 @@
     --spc-large: 2em;
     --spc-larger: 3em;
     --spc-huge: 5em;
+    --spc-gargantuan: 9em;
 
     --br-normal: 10px;
 }
@@ -48,7 +49,7 @@ body {
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 
-    margin: var(--spc-huge) 0;
+    padding: var(--spc-huge) 0;
 }   
 
 main {
@@ -70,6 +71,10 @@ main {
     font-weight: var(--fw-bold);
     margin-bottom: var(--spc-small);
     line-height: var(--fs-large);
+}
+
+.title > p {
+    color: var(--clr-dark-grayish-magenta);
 }
 
 .rating-container {
@@ -131,6 +136,87 @@ main {
     line-height: var(--fs-big);
 }
 
-@media screen and (min-width > 600px) {
-    /*Desktop Design*/
+@media screen and (min-width: 900px) {
+    :root {
+        --fs-huge: 3.5rem;
+        --fs-large: 3rem;
+    }
+
+    body {
+        height: 100vh;
+        background-image: url('images/bg-pattern-top-desktop.svg'), 
+        url('images/bg-pattern-bottom-desktop.svg');
+        background-size: 40%, 80%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 0 var(--spc-gargantuan);
+    }
+
+    .title {
+        width: 100%;
+        text-align: left;
+    }
+
+    .title > h1 {
+        width: 70%;
+        line-height: var(--fs-large);
+    }
+
+    .title > p {
+        width: 75%;
+        font-weight: var(--fw-normal);
+    }
+
+    .rating-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: var(--spc-large);
+    }
+
+    .rating {
+        width: 80%;
+        flex-direction: row;
+        padding: 0;
+        align-items: center;
+    }
+
+    .rating:first-child {
+        align-self: flex-start;
+    }
+
+    .rating:last-child {
+        align-self: flex-end;
+    }
+
+    .stars {
+        margin: 0;
+        padding: var(--spc-normal) var(--spc-large);
+    }
+
+    .reviews {
+        height: 300px;
+        margin-top: var(--spc-larger)
+    }
+
+    .review-card {
+        max-height: 90%;
+        margin: 0;
+    }
+
+    .review-card:first-child {
+        align-self: flex-start;
+    }
+
+    .review-card:last-child {
+        align-self: flex-end;
+    }
+
+    .review-card + .review-card {
+        margin-left: var(--spc-large);
+    }
 }
