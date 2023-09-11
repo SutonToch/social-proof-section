@@ -138,6 +138,7 @@ main {
 
 @media screen and (min-width: 900px) {
     :root {
+        --fs-normal: 1rem;
         --fs-huge: 3.5rem;
         --fs-large: 3rem;
     }
@@ -183,6 +184,7 @@ main {
         flex-direction: row;
         padding: 0;
         align-items: center;
+        padding: var(--spc-normal);
     }
 
     .rating:first-child {
@@ -194,12 +196,14 @@ main {
     }
 
     .stars {
+        flex-wrap: wrap;
         margin: 0;
-        padding: var(--spc-normal) var(--spc-large);
+        margin-right: var(--spc-normal);
+        min-width: 80px;
     }
 
     .reviews {
-        height: 300px;
+        height: 400px;
         margin-top: var(--spc-larger)
     }
 
@@ -220,3 +224,25 @@ main {
         margin-left: var(--spc-large);
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .rating {
+        padding: var(--spc-normal) var(--spc-large);
+    }
+    
+    .stars {
+        margin-right: var(--spc-large);
+    }
+
+    .reviews {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    :root {
+        --fs-normal: 1.1rem;
+    }
+}
+
+/*line height variable instead of using font-size*/
